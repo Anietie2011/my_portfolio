@@ -135,7 +135,7 @@ export default function GetInTouchPage() {
               name="name"
               value={form.name}
               onChange={handleChange}
-              placeholder="Full Name"
+              placeholder="John Doe"
               className="w-full p-4 rounded-2xl bg-black border border-white/10 focus:border-cyan-400 outline-none"
             />
             {errors.name && (
@@ -149,7 +149,7 @@ export default function GetInTouchPage() {
               name="email"
               value={form.email}
               onChange={handleChange}
-              placeholder="Email"
+              placeholder="johndoe@example.com"
               className="w-full p-4 rounded-2xl bg-black border border-white/10 focus:border-cyan-400 outline-none"
             />
             {errors.email && (
@@ -163,7 +163,7 @@ export default function GetInTouchPage() {
               name="message"
               value={form.message}
               onChange={handleChange}
-              placeholder="Message"
+              placeholder="Create a modern looking web site for me."
               rows={6}
               className="w-full p-4 rounded-2xl bg-black border border-white/10 focus:border-cyan-400 outline-none"
             />
