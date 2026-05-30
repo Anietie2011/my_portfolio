@@ -3,6 +3,7 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Footer from "@/components/Footer";
 
 export default function GetInTouchPage() {
 
@@ -109,7 +110,8 @@ export default function GetInTouchPage() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-20 relative">
+    <>
+      <main className="min-h-screen bg-black text-white px-6 py-20 relative">
       <button
         onClick={() => router.back()}
         className="mb-10 px-6 py-3 border border-white/20 rounded-xl hover:bg-white/10 transition"
@@ -221,6 +223,9 @@ export default function GetInTouchPage() {
       <h3 className="text-xl font-bold">+234 810 709 2013</h3>
     </div>
   </div>
+  
     </main>
+    <Footer />
+    </>
   );
 }
