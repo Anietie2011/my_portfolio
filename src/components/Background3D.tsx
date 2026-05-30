@@ -21,7 +21,6 @@ function AnimatedSphere() {
       <Sphere ref={meshRef} args={[1, 100, 100]} scale={2.4}>
         <meshStandardMaterial
           color="#22d3ee"
-          wireframe
           roughness={0.1}
           metalness={0.8}
         />
@@ -67,7 +66,7 @@ function ParticleField({ count = 1000 }) {
 
 export default function Background3D() {
   return (
-    <div className="absolute inset-0 z-0 pointer-events-none opacity-50">
+    <div className="absolute inset-0 z-0 pointer-events-none">
       <Canvas camera={{ position: [0, 0, 5], fov: 75 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={1} />

@@ -62,11 +62,14 @@ export default function Hero() {
         </p>
         
         <motion.a
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           whileHover={{ x: 5, color: "#22d3ee" }}
           href="https://maps.app.goo.gl/6kGerVApy5RsfbEY9"
           target="_blank"
           rel="noopener noreferrer"
-          className="hero-subtitle text-gray-400 text-sm mb-6 inline-block transition"
+          className="hero-location text-gray-400 text-sm mb-6 block transition relative z-20"
         >
           📍 Ikot Ekpene, Akwa Ibom, Nigeria
         </motion.a>

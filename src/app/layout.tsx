@@ -29,7 +29,7 @@ export default function RootLayout({
         }}
       >
         <SmoothScroll>
-          <div className="relative z-10">{children}</div>
+          <div>{children}</div>
         </SmoothScroll>
       </body>
     </html>
