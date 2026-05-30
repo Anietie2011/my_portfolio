@@ -40,6 +40,15 @@ const targetProjects = 200;
 return (
   <section className="max-w-7xl mx-auto px-6 min-h-screen flex flex-col justify-center relative"> <div className="max-w-4xl"> <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm mb-6">
     Fullstack Developer </p>
+    
+        <a
+      href="https://maps.app.goo.gl/6kGerVApy5RsfbEY9"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-400 text-sm mb-6 inline-block hover:text-cyan-400 transition"
+    >
+      📍 Ikot Ekpene, Akwa Ibom, Nigeria
+    </a>
 
 
     <h1 className="text-5xl md:text-8xl font-black leading-none mb-8">

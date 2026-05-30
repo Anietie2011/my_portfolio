@@ -1,5 +1,35 @@
 // data/portfolioData.ts
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaReact,
+  FaGitAlt,
+  FaNodeJs,
+  FaCode,
+} from "react-icons/fa";
 
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMongodb,
+  SiExpress,
+  SiSass,
+  SiShadcnui,
+  SiGsap,
+  SiAppwrite,
+} from "react-icons/si";
+
+import {
+  SiReact,
+  SiElectron,
+  SiPostgresql,
+  SiSocketdotio,
+  SiWebrtc,
+  SiTensorflow,
+  SiRust,
+} from "react-icons/si";
 // 🟢 MY BEST WORK (SHOWCASE PROJECTS)
 export const featuredProjects = [
   {
@@ -121,26 +151,30 @@ export const selectedProjects = [
 
 
 export const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Tailwind",
-  "Sass",
-  "Git",
-  "Node.js",
-  "Express.js",
-  "MongoDB",
+  { name: "HTML", icon: FaHtml5 },
+  { name: "CSS", icon: FaCss3Alt },
+  { name: "JavaScript", icon: FaJs },
+  { name: "TypeScript", icon: SiTypescript },
+  { name: "React", icon: FaReact },
+  { name: "Next.js", icon: SiNextdotjs },
+  { name: "Shadcn UI", icon: SiShadcnui },
+  { name: "GSAP", icon: SiGsap },
+  {name: "Appwrite", icon: SiAppwrite},
+  { name: "Convex", icon: FaCode },
+  { name: "Tailwind", icon: SiTailwindcss },
+  { name: "Sass", icon: SiSass },
+  { name: "Git", icon: FaGitAlt },
+  { name: "Node.js", icon: FaNodeJs },
+  { name: "Express.js", icon: SiExpress },
+  { name: "MongoDB", icon: SiMongodb },
 ];
 
 export const learningSkills = [
-  "React Native",
-  "Electron",
-  "PostgreSQL",
-  "Socket.io",
-  "WebRTC",
-  "TensorFlow.js",
-  "Rust",
+  { name: "React Native", icon: SiReact },
+  { name: "Electron", icon: SiElectron },
+  { name: "PostgreSQL", icon: SiPostgresql },
+  { name: "Socket.io", icon: SiSocketdotio },
+  { name: "WebRTC", icon: SiWebrtc },
+  { name: "TensorFlow.js", icon: SiTensorflow },
+  { name: "Rust", icon: SiRust },
 ];
