@@ -19,9 +19,6 @@ import {
   SiShadcnui,
   SiGsap,
   SiAppwrite,
-} from "react-icons/si";
-
-import {
   SiReact,
   SiElectron,
   SiPostgresql,
@@ -30,6 +27,7 @@ import {
   SiTensorflow,
   SiRust,
 } from "react-icons/si";
+
 // 🟢 MY BEST WORK (SHOWCASE PROJECTS)
 export const featuredProjects = [
   {
