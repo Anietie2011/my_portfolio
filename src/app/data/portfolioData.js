@@ -26,7 +26,9 @@ import {
   SiWebrtc,
   SiTensorflow,
   SiRust,
+  SiThreedotjs ,  
 } from "react-icons/si";
+import { TbBrandFramerMotion } from "react-icons/tb";
 
 // 🟢 MY BEST WORK (SHOWCASE PROJECTS)
 export const featuredProjects = [
@@ -157,6 +159,8 @@ export const skills = [
   { name: "Next.js", icon: SiNextdotjs },
   { name: "Shadcn UI", icon: SiShadcnui },
   { name: "GSAP", icon: SiGsap },
+  { name: "Three.js", icon: SiThreedotjs },
+  { name: "Framer Motion", icon: TbBrandFramerMotion},
   {name: "Appwrite", icon: SiAppwrite},
   { name: "Convex", icon: FaCode },
   { name: "Tailwind", icon: SiTailwindcss },

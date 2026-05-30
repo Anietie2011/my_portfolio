@@ -2,6 +2,92 @@
 'use client'
 import ShinyText from "./ShinyText";
 import { featuredProjects, selectedProjects } from "@/app/data/portfolioData";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
+import React from "react";
+
+function ProjectCard({ project, index }: { project: any, index: number }) {
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+
+  const mouseXSpring = useSpring(x);
+  const mouseYSpring = useSpring(y);
+
+  const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["10deg", "-10deg"]);
+  const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-10deg", "10deg"]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const width = rect.width;
+    const height = rect.height;
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const xPct = mouseX / width - 0.5;
+    const yPct = mouseY / height - 0.5;
+    x.set(xPct);
+    y.set(yPct);
+  };
+
+  const handleMouseLeave = () => {
+    x.set(0);
+    y.set(0);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.1, duration: 0.6 }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        rotateX,
+        rotateY,
+        transformStyle: "preserve-3d",
+      }}
+      className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors duration-500"
+    >
+      <div style={{ transform: "translateZ(50px)" }}>
+        {/* Title */}
+        <h3 className="text-xl font-bold mb-3 text-white">
+          {project.title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-400 mb-6">
+          {project.description}
+        </p>
+
+        {/* Tech */}
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.tech.map((item: string, i: number) => (
+            <span
+              key={i}
+              className="px-3 py-1 text-sm bg-white/10 rounded-full text-gray-300"
+            >
+              {item}
+            </span>
+          ))}
+        </div>
+
+        {/* Links */}
+        <div className="flex gap-4 text-sm text-cyan-400">
+          {project.links?.github && (
+            <motion.a whileHover={{ scale: 1.1 }} href={project.links.github} target="_blank">
+              GitHub
+            </motion.a>
+          )}
+
+          {project.links?.live && (
+            <motion.a whileHover={{ scale: 1.1 }} href={project.links.live} target="_blank">
+              Live
+            </motion.a>
+          )}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Projects() {
   return (
@@ -9,67 +95,6 @@ export default function Projects() {
       id="projects"
       className="max-w-7xl mx-auto px-6 py-32 border-t border-white/10"
     >
-      {/* FEATURED PROJECTS */}
-      {/* <div className="mb-16">
-        <p className="text-cyan-400 uppercase text-sm mb-4">
-          Featured Projects
-        </p>
-
-        <h2 className="text-4xl md:text-6xl font-black">
-          My Best Work
-        </h2>
-      </div> */}
-
-  {/* <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-24">
-        {featuredProjects.map((project, index) => (
-          <div
-            key={index}
-            className="group bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition duration-500 hover:-translate-y-2"
-          >
-           
-            <div className="h-52 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 mb-8 flex items-center justify-center text-6xl font-black text-white/20">
-              0{index + 1}
-            </div>
-
-           
-            <h3 className="text-2xl font-bold mb-3">
-              {project.title}
-            </h3>
-
-            
-            <p className="text-gray-400 leading-relaxed mb-6">
-              {project.description}
-            </p>
-
-            
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.tech.map((item, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-sm bg-white/10 rounded-full text-gray-300"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex gap-4 text-sm text-cyan-400">
-              {project.links?.github && (
-                <a href={project.links.github} target="_blank">
-                  GitHub
-                </a>
-              )}
-
-              {project.links?.live && (
-                <a href={project.links.live} target="_blank">
-                  Live
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
-      </div> */}
-
       {/* SELECTED PROJECTS */}
       <div className="mb-10">
         <p className="text-cyan-400 uppercase text-sm mb-4">
@@ -94,50 +119,11 @@ export default function Projects() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {selectedProjects.map((project, index) => (
-          <div
-            key={index}
-            className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition duration-300"
-          >
-            {/* Title */}
-            <h3 className="text-xl font-bold mb-3">
-              {project.title}
-            </h3>
-
-            {/* Description */}
-            <p className="text-gray-400 mb-6">
-              {project.description}
-            </p>
-
-            {/* Tech */}
-            <div className="flex flex-wrap gap-2 mb-6">
-              {project.tech.map((item, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-sm bg-white/10 rounded-full text-gray-300"
-                >
-                  {item}
-                </span>
-              ))}
-            </div>
-
-            {/* Links */}
-            <div className="flex gap-4 text-sm text-cyan-400">
-              {project.links?.github && (
-                <a href={project.links.github} target="_blank">
-                  GitHub
-                </a>
-              )}
-
-              {project.links?.live && (
-                <a href={project.links.live} target="_blank">
-                  Live
-                </a>
-              )}
-            </div>
-          </div>
+          <ProjectCard key={index} project={project} index={index} />
         ))}
       </div>
     </section>
   );
 }
+
 
