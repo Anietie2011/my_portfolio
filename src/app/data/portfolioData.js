@@ -6,7 +6,8 @@ import {
   FaReact,
   FaGitAlt,
   FaNodeJs,
-  FaCode,
+  FaPython,
+  FaUnity
 } from "react-icons/fa";
 
 import {
@@ -20,15 +21,18 @@ import {
   SiGsap,
   SiAppwrite,
   SiReact,
-  SiElectron,
+  SiConvex,
   SiPostgresql,
   SiSocketdotio,
   SiWebrtc,
   SiTensorflow,
   SiRust,
-  SiThreedotjs ,  
+  SiThreedotjs,
+  SiNestjs,
+  SiNodegui,
+  SiBlender
 } from "react-icons/si";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { TbBrandFramerMotion,  TbBrandCSharp } from "react-icons/tb";
 
 // 🟢 MY BEST WORK (SHOWCASE PROJECTS)
 export const featuredProjects = [
@@ -157,26 +161,31 @@ export const skills = [
   { name: "TypeScript", icon: SiTypescript },
   { name: "React", icon: FaReact },
   { name: "Next.js", icon: SiNextdotjs },
+  { name: "React Native", icon: SiReact },
+  { name: "Node GUI", icon: SiNodegui },
   { name: "Shadcn UI", icon: SiShadcnui },
   { name: "GSAP", icon: SiGsap },
   { name: "Three.js", icon: SiThreedotjs },
   { name: "Framer Motion", icon: TbBrandFramerMotion},
   {name: "Appwrite", icon: SiAppwrite},
-  { name: "Convex", icon: FaCode },
+  { name: "Convex", icon: SiConvex},
   { name: "Tailwind", icon: SiTailwindcss },
   { name: "Sass", icon: SiSass },
   { name: "Git", icon: FaGitAlt },
   { name: "Node.js", icon: FaNodeJs },
+  { name: "Nest js", icon: SiNestjs},
   { name: "Express.js", icon: SiExpress },
   { name: "MongoDB", icon: SiMongodb },
+  { name: "Socket.io", icon: SiSocketdotio },
+  { name: "WebRTC", icon: SiWebrtc },
+  { name: "C#", icon: TbBrandCSharp},
+  { name: "Python", icon: FaPython}
 ];
 
 export const learningSkills = [
-  { name: "React Native", icon: SiReact },
-  { name: "Electron", icon: SiElectron },
   { name: "PostgreSQL", icon: SiPostgresql },
-  { name: "Socket.io", icon: SiSocketdotio },
-  { name: "WebRTC", icon: SiWebrtc },
   { name: "TensorFlow.js", icon: SiTensorflow },
   { name: "Rust", icon: SiRust },
+  { name: "Unity", icon: FaUnity},
+  { name: "Blender", icon: SiBlender}
 ];

@@ -4,6 +4,7 @@ import ShinyText from "./ShinyText";
 import { motion } from "framer-motion";
 
 export default function About() {
+  const currentDate = new Date().getFullYear();
   return (
     <section
       id="about"
@@ -43,7 +44,11 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
           <p className="text-gray-400 text-lg leading-relaxed mb-6">
-            I am a 14-year-old developer passionate about building modern, high-quality web applications that feel premium, responsive, and alive. My focus is on creating clean, intuitive interfaces and seamless user experiences that people enjoy using.
+           {
+              `
+              I am a ${currentDate - 2011}-years-old developer passionate about building modern, high-quality web applications that feel premium, responsive, and alive. My focus is on creating clean, intuitive interfaces and seamless user experiences that people enjoy using.
+            `
+           }
           </p>
 
           <p className="text-gray-500 leading-relaxed">
