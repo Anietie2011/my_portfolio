@@ -143,8 +143,8 @@ export const selectedProjects = [
   },{
     title: "Pedium",
     description:
-      "An ai bods build with tensorflow.js.",
-    tech: ["Next.js", "TensorFlow.js","tailwind", "MongoDB", "Express"],
+      "An AI bot ecosystem built with TensorFlow.js.",
+    tech: ["Next.js", "TensorFlow.js","Tailwind CSS", "MongoDB", "Express"],
     links: {
       github: "",
       live: "",

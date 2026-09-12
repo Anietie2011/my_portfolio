@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   const [years, setYears] = useState(0);
   const [projects, setProjects] = useState(0);
-  const targetProjects = 200;
+  const targetProjects = 20;
   const targetYears = 3;
 
   const containerRef = useRef(null);
