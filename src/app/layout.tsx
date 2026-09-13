@@ -128,47 +128,7 @@ export default function RootLayout({
       </body>
     </html>
   );
-    }    alternateName: "Anietienteabasi Etim",
-    url: "https://anietie.vercel.app",
-    email: "anietienteabasietim@gmail.com",
-    telephone: "+2348107092013",
-    jobTitle: "Fullstack Developer",
-
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Ikot Ekpene",
-      addressRegion: "Akwa Ibom",
-      addressCountry: "Nigeria",
-    },
-
-    knowsAbout: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Shadcn UI",
-      "GSAP",
-      "Three.js",
-      "Framer Motion",
-      "Appwrite",
-      "Convex",
-      "Tailwind",
-      "Sass",
-      "Git",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Socket.io",
-      "WebRTC",
-      "TensorFlow.js",
-      "React Native",
-      "Electron",
-      "PostgreSQL",
-      "Rust",
-    ],
-  };
+}  };
 
   return (
     <html lang="en">
